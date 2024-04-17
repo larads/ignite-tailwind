@@ -6,6 +6,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      maxWidth: {
+        app: '700px'
+      },
       colors: {
         mari: '#8257e6'
       }
