@@ -1,26 +1,28 @@
 'use client'
 
-import * as Tabs from '@radix-ui/react-tabs'
 import { motion } from 'framer-motion'
+import * as Tabs from '@radix-ui/react-tabs'
 
-export interface TabItemProps {
+interface TabItemProps {
   value: string
   title: string
-  isSelected?: boolean
+  isSelected: boolean
 }
 
-export function TabItem({ value, title, isSelected = false }: TabItemProps) {
+export function TabItem({ title, value, isSelected }: TabItemProps) {
   return (
     <Tabs.Trigger
       value={value}
-      className="relative px-1 pb-4 align-top text-sm font-medium text-zinc-500 hover:text-blue-500 data-[state=active]:text-blue-500"
+      className="group relative px-1 pb-4 text-sm font-medium leading-5 text-zinc-500 outline-none hover:text-blue-700 data-[state=active]:text-blue-700 dark:text-zinc-400 dark:hover:text-zinc-100 dark:data-[state=active]:text-zinc-100"
     >
-      <span>{title}</span>
+      <span className="whitespace-nowrap rounded group-focus-visible:ring-2 group-focus-visible:ring-blue-400 group-focus-visible:ring-offset-4">
+        {title}
+      </span>
 
       {isSelected && (
         <motion.div
           layoutId="activeTab"
-          className="absolute -bottom-px left-0 right-0 h-0.5 bg-blue-500"
+          className="absolute -bottom-px left-0 right-0 h-0.5 bg-blue-700 dark:bg-blue-400"
         />
       )}
     </Tabs.Trigger>
