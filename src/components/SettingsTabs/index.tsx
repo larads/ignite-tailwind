@@ -12,7 +12,7 @@ export function SettingsTabs() {
     <Tabs.Root value={currentTab} onValueChange={setCurrentTab}>
       <ScrollArea.Root className="w-full bg-slate-900" type="scroll">
         <ScrollArea.Viewport className="w-full overflow-x-scroll bg-slate-900">
-          <Tabs.List className="mb-5 flex w-full gap-10 border-b border-zinc-400">
+          <Tabs.List className="mb-5 flex w-full gap-10 border-b border-zinc-400 dark:border-zinc-700">
             <TabItem
               value="tab1"
               title="My details"

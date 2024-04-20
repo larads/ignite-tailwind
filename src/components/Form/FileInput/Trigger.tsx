@@ -9,15 +9,18 @@ export function Trigger() {
   return (
     <label
       htmlFor={id}
-      className="group flex flex-1 cursor-pointer flex-col items-center gap-3 rounded-lg border border-zinc-300 px-6 py-4 text-center text-zinc-500 shadow-sm hover:border-blue-200 hover:bg-blue-200 hover:text-blue-500"
+      className="group flex flex-1 cursor-pointer flex-col items-center gap-3 rounded-lg border border-zinc-300 px-6 py-4 text-center text-zinc-400 shadow-sm hover:border-blue-200 hover:bg-blue-200 hover:text-blue-500
+      dark:border-zinc-600 dark:hover:border-blue-700 dark:hover:bg-slate-900 dark:hover:text-blue-700"
     >
-      <div className="rounded-full border-6 border-zinc-50 bg-zinc-100 p-2 group-hover:border-blue-50 group-hover:bg-blue-100">
-        <UploadCloud className="h-5 w-5 text-zinc-600 group-hover:text-blue-600" />
+      <div className="rounded-full border-6 border-slate-900 bg-white p-2 group-hover:border-blue-500 group-hover:bg-zinc-100">
+        <UploadCloud className="h-5 w-5 text-slate-900 group-hover:text-slate-900 dark:text-slate-900 dark:group-hover:text-blue-800" />
       </div>
 
       <div className="flex flex-col items-center gap-1">
         <span className="text-sm">
-          <span className="font-semibold text-blue-700">Click to upload</span>{' '}
+          <span className="font-semibold text-blue-700 dark:text-blue-500">
+            Click to upload
+          </span>{' '}
           or drag and drop
         </span>
         <span className="text-xs">SVG, PNG, JPG or GIF (max. 800x400px)</span>
